@@ -1,5 +1,23 @@
 {
+  "name": "primeiros-passos-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
   "devDependencies": {
     "cypress": "^14.5.4"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonardoTester/primeiros-passos-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonardoTester/primeiros-passos-cypress/issues"
+  },
+  "homepage": "https://github.com/LeonardoTester/primeiros-passos-cypress#readme"
 }
