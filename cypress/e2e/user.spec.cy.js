@@ -18,14 +18,11 @@ describe('Orange HRM Tests', () => {
     dashboardPage.checkDashboard()         // checagem de dashboard
     menuPage.infoCheck()                  // abre a tela My Info
     infoPage.EmployeeFullName('Leonardo', 'second', 'seven')          // preenche nome completo
-    infoPage.personalDetails()          // preenche os outros campos
-
+    infoPage.personalDetails('nasci2', '999','666', '2012-12-12', '2015-05-05')          // preenche os outros campos idNameField, otherID, LicenseNumbe, DateExpiry0, DateExpiry1
+    infoPage.SaveForm()
     
   })
-
-  it.skip('Login - Fail', () => {
-    
-  })
+  
 })
 
 

@@ -10,7 +10,8 @@ class pageTest {
         idNameField: "[data-v-1f99f73c='']",
         otherID: ".oxd-input", // 5
         LicenseNumber: ".oxd-input", // 6
-        DateExpiry: "[placeholder='yyyy-dd-mm']", // 0
+        DateExpiry0: "[placeholder='yyyy-dd-mm']", // 0
+        DateExpiry1: "[placeholder='yyyy-dd-mm']", // 0
         saveButton: "[type='submit']",
         DatecloseButton: ".--close",
         openNationality: "[clear='false']",
@@ -32,18 +33,20 @@ class pageTest {
         
     }
 
-    personalDetails() {
-        cy.get(this.selectorList().idNameField).eq(4).clear().type("nickname2")
-        cy.get(this.selectorList().otherID).eq(5).clear().type('ID1')
-        cy.get(this.selectorList().LicenseNumber).eq(6).clear().type('ID2')
-        cy.get(this.selectorList().DateExpiry).eq(0).clear({ force: true }).type('2024-09-09', { force: true })
-        cy.get(this.selectorList().DateExpiry).eq(1).clear({ force: true }).type('2024-07-09', { force: true })
+    personalDetails(idNameField, otherID, LicenseNumbe, DateExpiry0, DateExpiry1) {
+        cy.get(this.selectorList().idNameField).eq(4).clear().type(idNameField)
+        cy.get(this.selectorList().otherID).eq(5).clear().type(otherID)
+        cy.get(this.selectorList().LicenseNumber).eq(6).clear().type(LicenseNumbe)
+        cy.get(this.selectorList().DateExpiry0).eq(0).clear({ force: true }).type(DateExpiry0, { force: true })
+        cy.get(this.selectorList().DateExpiry1).eq(1).clear({ force: true }).type(DateExpiry1, { force: true })
         cy.get(this.selectorList().DatecloseButton).click()  
         cy.get(this.selectorList().openNationality).eq(0).click()
         cy.get(this.selectorList().selectNationality).click()
         cy.get(this.selectorList().openMaritalStatus).eq(1).click()
         cy.get(this.selectorList().selectMarital).click()
-        cy.get(this.selectorList().selectGender).eq(0).click()    
+        cy.get(this.selectorList().selectGender).eq(0).click() 
+        
+        
         
         
     }

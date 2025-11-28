@@ -30,6 +30,12 @@ class LoginPage {
 
         }
 
+        AlertErrorLogin() {
+
+
+            cy.get(this.selectorsList().wrongCredentialAlert)
+
+        }
     }
 
     export default LoginPage
